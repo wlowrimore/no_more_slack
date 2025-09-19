@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./components/header/Header";
 
 import "./globals.css";
+import NavLinksComp from "./components/header/NavLinks";
+import Avatar from "./components/header/Avatar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className='w-8xl pt-3 px-6'>
-        <Header />
+        <header className="grid grid-cols-2 w-8xl pt-3 px-6">
+          <Header />
+          <Avatar />
+        </header>
         {children}
-        </main>
       </body>
     </html>
   );

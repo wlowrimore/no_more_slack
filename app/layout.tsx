@@ -31,10 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="grid grid-cols-2 w-8xl pt-3 px-6">
+        <section className="grid grid-cols-2 w-8xl pt-3 px-6">
           <Header />
-          <Avatar />
-        </header>
+        </section>
         {children}
       </body>
     </html>
